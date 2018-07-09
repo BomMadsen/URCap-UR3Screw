@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>UR3 Screw</title>
+		<style>
+			input {
+				display: inline-block;
+				width: 70px;
+				height: 28px;
+			}
+			div.spacer {
+				padding-top: 10px;
+	 		}
+		</style>
+	</head>
+	<body>
+		<p> UR3 Screw is a sample URCaps project.<em> Use with care!</em> </p>
+		<br>
+		<p> UR3 Screw rotates Wrist 3 until either a given rotations, torque, <br>time or distance is reached.<br>
+		Note that the torque tolerance on a UR3 is +/- 5 Nm. </p><br>
+		<div class="spacer">&nbsp;</div>
+		
+		<form>
+			Choose direction:<br>
+			<input id="directionCW" type="radio" name="cwccw" value="cw" checked> Clockwise<br>
+			<input id="directionCCW" type="radio" name="cwccw" value="ccw"> Counter-clockwise<br>
+			<p> Choose desired options: </p>
+			Rotations: <input id="cbRotations" type="checkbox"> <input id="rotations" type="number" min="0" size="10"> revolutions <br>
+			Torque: <input id="cbTorque" type="checkbox"> <input id="torque" type="number" min="0" max="12" size="10"> Nm <br>
+			Distance: <input id="cbDistance" type="checkbox"> <input id="distance" type="number" min="0" size="10"> mm <br>
+			Timeout: <input id="cbTime" type="checkbox"> <input id="time" type="number" min="0" size="10"> seconds <br>
+		</form>
+		<div class="spacer">&nbsp;</div>
+		<p> General parameters: </p>
+		<form>
+			Force: <input id="force" type="number" min="0" value="15" size="10"> N<br>
+			Rotation speed: <input id="speed" type="number" min="0" max="360" value="360" size="10"> &deg;/sec <br>
+		</form>
+	</body>
+</html>
